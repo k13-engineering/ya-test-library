@@ -9,12 +9,17 @@ interface ITestGroup {
     }
 };
 
+interface ITestResult {
+    failed: boolean;
+};
+
 interface ITestRunner {
-    run: (args: { group: ITestGroup, bail?: boolean }) => void;
+    run: (args: { group: ITestGroup, bail?: boolean }) => Promise<ITestResult>;
 };
 
 export type {
-    ITestRunner,
+    TTestFunction,
     ITestGroup,
-    TTestFunction
+    ITestResult,
+    ITestRunner,
 };

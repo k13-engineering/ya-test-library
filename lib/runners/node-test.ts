@@ -57,12 +57,16 @@ const create = (): ITestRunner => {
             };
         };
 
-        await createTestsForGroupRecursively({
+        const { failed } = await createTestsForGroupRecursively({
             testContext: {
                 test: nodeTestModule
             } as TestContext,
             group
         });
+
+        return {
+            failed
+        };
     };
 
     return {
