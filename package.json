@@ -1,0 +1,29 @@
+{
+    "name": "ya-test-library",
+    "version": "0.0.1",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+    },
+    "devDependencies": {
+        "@types/node": "^20.12.10",
+        "deno-node": "^0.0.4"
+    },
+    "exports": {
+        ".": {
+            "node": {
+                "import": "./dist/lib/index.js"
+            }
+        },
+        "node-test-runner": {
+            "node": {
+                "import": "./dist/lib/runners/node-test.js"
+            }
+        }
+    },
+    "scripts": {
+        "build": "rm -rf dist/ && deno-node-build --root . --out dist/ --entry lib/index.ts --entry lib/runners/node-test.ts"
+    }
+}
