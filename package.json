@@ -17,7 +17,7 @@
                 "import": "./dist/lib/index.js"
             }
         },
-        "node-test-runner": {
+        "./node-test-runner": {
             "node": {
                 "import": "./dist/lib/runners/node-test.js"
             }
