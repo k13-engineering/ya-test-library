@@ -9,7 +9,7 @@
     },
     "devDependencies": {
         "@types/node": "^20.12.10",
-        "deno-node": "^0.0.4"
+        "deno-node": "^0.0.6"
     },
     "exports": {
         ".": {
