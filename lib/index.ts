@@ -1,1 +1,1 @@
-import {} from "./types.ts";
+export type * from "./types.ts";
